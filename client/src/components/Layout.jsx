@@ -1,10 +1,11 @@
 // src/layout/Layout.jsx
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Outlet} from 'react-router-dom';
 import { Home, Info, ContactMail, Menu } from '@mui/icons-material';
 import Header from './Header';
 
-const Layout = ({ children }) => {
+const Layout = ( ) => {
+  
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
 
   const toggleSidebar = () => {
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
             </li>
             <li className="mb-4">
               <NavLink
-                to="/about"
+                to="/health-care"
                 className={({ isActive }) =>
                   `flex items-center p-2 ${isActive ? 'text-blue-300' : 'text-white'} hover:text-blue-300`
                 }
@@ -49,13 +50,13 @@ const Layout = ({ children }) => {
             </li>
             <li className="mb-4">
               <NavLink
-                to="/contact"
+                to="/doctors"
                 className={({ isActive }) =>
                   `flex items-center p-2 ${isActive ? 'text-blue-300' : 'text-white'} hover:text-blue-300`
                 }
               >
                 <ContactMail />
-                {isSidebarExpanded && <span className="ml-4">Contact</span>}
+                {isSidebarExpanded && <span className="ml-4">Appointment</span>}
               </NavLink>
             </li>
           </ul>
@@ -69,7 +70,7 @@ const Layout = ({ children }) => {
        
         {/* Content */}
         <main className="flex-1 p-6">
-          {children}
+          <Outlet/>
         </main>
 
         {/* Footer */}

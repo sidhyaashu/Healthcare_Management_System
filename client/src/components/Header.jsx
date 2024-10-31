@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
+  let location = useLocation()
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = () => {
