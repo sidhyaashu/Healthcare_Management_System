@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Home, Info, ContactMail, Menu } from '@mui/icons-material';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
                 }
               >
                 <Home />
-                {isSidebarExpanded && <span className="ml-4">Home</span>}
+                {isSidebarExpanded && <span className="ml-4">Nearby Hospitals</span>}
               </NavLink>
             </li>
             <li className="mb-4">
@@ -43,7 +44,7 @@ const Layout = ({ children }) => {
                 }
               >
                 <Info />
-                {isSidebarExpanded && <span className="ml-4">About</span>}
+                {isSidebarExpanded && <span className="ml-4">Hospitals</span>}
               </NavLink>
             </li>
             <li className="mb-4">
@@ -64,13 +65,8 @@ const Layout = ({ children }) => {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="bg-white shadow p-4 flex items-center justify-between">
-          <h1 className="text-xl font-semibold text-gray-700">Nearby Hospital</h1>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
-            Sign Out
-          </button>
-        </header>
-
+        <Header/>
+       
         {/* Content */}
         <main className="flex-1 p-6">
           {children}
