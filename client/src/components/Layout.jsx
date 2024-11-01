@@ -28,6 +28,15 @@ const Layout = ( ) => {
           <ul>
             <li className="mb-4">
               <NavLink
+                to="/profile"
+                className={({ isActive }) =>
+                  `flex items-center p-2 ${isActive ? 'text-blue-300' : 'text-white'} hover:text-blue-300`
+                }
+              >
+                <Home />
+                {isSidebarExpanded && <span className="ml-4">Profile</span>}
+              </NavLink>
+              <NavLink
                 to="/"
                 className={({ isActive }) =>
                   `flex items-center p-2 ${isActive ? 'text-blue-300' : 'text-white'} hover:text-blue-300`

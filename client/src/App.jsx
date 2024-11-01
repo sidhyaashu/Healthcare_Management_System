@@ -1,17 +1,12 @@
 import Layout from "./components/Layout";
-import Appointment from "./pages/Appointment";
 import HealthCare from "./pages/HealthCare";
 import MapPage from "./pages/MapPage";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import DoctorList from "./pages/DoctorList"
-import DoctorProfile from "./components/DoctorProfile"
-import AppointmentConfirmation from "./components/AppointmentConfirmation"
-
-
-
+import DoctorList from "./pages/DoctorList";
+import DoctorProfile from "./components/doctor/DoctorProfile";
+import AppointmentConfirmation from "./components/appoinments/AppointmentConfirmation"; 
+import UserProfile from "./pages/UserProfile";
+import AppointmentDetails from "./components/appoinments/AppointmentDetails"; // Import new component
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -19,43 +14,39 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <MapPage />,
       },
       {
-        path: "/health-care",
-        element: <HealthCare/>,
+        path: "health-care",
+        element: <HealthCare />,
       },
       {
-        path: "/appointment",
-        element: <Appointment/>,
-        children:[
-          {
-            path:"confirmation/:doctorId/:slot",
-            element:<AppointmentConfirmation/>
-          },
-        ]
+        path: "appointment/confirmation/:doctorId/:slot",
+        element: <AppointmentConfirmation />,
       },
       {
-        path: "/doctors",
-        element: <DoctorList/>,
-        children:[
-          {
-            path:":id",
-            element:<DoctorProfile/>
-          },
-          
-        ]
+        path: "doctors",
+        element: <DoctorList />,
+      },
+      {
+        path: "doctors/:id",
+        element: <DoctorProfile />,
+      },
+      {
+        path: "profile",
+        element: <UserProfile />,
+      },
+      {
+        path: "appointment/:id", // New route for appointment details
+        element: <AppointmentDetails />,
       },
     ],
-    
   },
 ]);
 
-
 function App() {
-  return <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
 }
 
 export default App;
-

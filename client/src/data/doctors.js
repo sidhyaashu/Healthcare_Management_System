@@ -1,31 +1,19 @@
 // src/data/doctors.js
 export const doctors = [
-    {
-      id: 1,
-      name: "Dr. John Doe",
-      specialty: "Cardiologist",
-      rating: "4.8",
-      image: "https://via.placeholder.com/150",
-      bio: "Expert in heart health with over 10 years of experience.",
-      availableSlots: [
-        "2024-11-01T10:00:00",
-        "2024-11-01T11:00:00",
-        "2024-11-01T14:00:00",
-      ],
-    },
-    {
-      id: 2,
-      name: "Dr. Jane Smith",
-      specialty: "Dermatologist",
-      rating: "4.5",
-      image: "https://via.placeholder.com/150",
-      bio: "Specializing in skin conditions and treatments.",
-      availableSlots: [
-        "2024-11-01T12:00:00",
-        "2024-11-01T13:00:00",
-        "2024-11-01T15:00:00",
-      ],
-    },
+  { id: 1, name: "Dr. John Doe", specialty: "Cardiologist", rating: "4.8", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Expert in heart health with over 10 years of experience.", availableSlots: ["2024-11-01T10:00:00", "2024-11-01T11:00:00", "2024-11-01T14:00:00"] },
+  { id: 2, name: "Dr. Jane Smith", specialty: "Dermatologist", rating: "4.5", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Specializing in skin conditions and treatments.", availableSlots: ["2024-11-01T12:00:00", "2024-11-01T13:00:00", "2024-11-01T15:00:00"] },
+  { id: 3, name: "Dr. Emily White", specialty: "Neurologist", rating: "4.7", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Experienced neurologist with expertise in brain health.", availableSlots: ["2024-11-01T09:00:00", "2024-11-01T12:00:00", "2024-11-01T15:00:00"] },
+  { id: 4, name: "Dr. Michael Lee", specialty: "Orthopedic", rating: "4.9", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Orthopedic surgeon specializing in joint replacements.", availableSlots: ["2024-11-01T08:00:00", "2024-11-01T11:00:00", "2024-11-01T16:00:00"] },
+  { id: 5, name: "Dr. Lisa Brown", specialty: "Pediatrician", rating: "4.8", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Compassionate pediatrician with a focus on child health.", availableSlots: ["2024-11-01T10:00:00", "2024-11-01T13:00:00", "2024-11-01T15:00:00"] },
+  { id: 6, name: "Dr. Raj Patel", specialty: "Cardiologist", rating: "4.6", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Renowned cardiologist specializing in heart disease.", availableSlots: ["2024-11-01T09:30:00", "2024-11-01T12:30:00", "2024-11-01T16:30:00"] },
+  { id: 7, name: "Dr. Karen Zhou", specialty: "Dermatologist", rating: "4.4", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Dermatologist with a focus on cosmetic treatments.", availableSlots: ["2024-11-01T11:00:00", "2024-11-01T14:00:00", "2024-11-01T17:00:00"] },
+  { id: 8, name: "Dr. Sarah Lee", specialty: "Gastroenterologist", rating: "4.9", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Specializes in digestive system and liver health.", availableSlots: ["2024-11-01T09:00:00", "2024-11-01T13:00:00", "2024-11-01T15:00:00"] },
+  { id: 9, name: "Dr. Kevin Brown", specialty: "Endocrinologist", rating: "4.7", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Experienced in hormone-related disorders.", availableSlots: ["2024-11-01T10:00:00", "2024-11-01T12:00:00", "2024-11-01T14:00:00"] },
+  { id: 10, name: "Dr. Olivia Young", specialty: "Gynecologist", rating: "4.8", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Specialist in women's health.", availableSlots: ["2024-11-01T11:00:00", "2024-11-01T13:00:00", "2024-11-01T15:00:00"] },
+  { id: 11, name: "Dr. James Green", specialty: "Oncologist", rating: "4.9", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Cancer specialist with a patient-centered approach.", availableSlots: ["2024-11-01T08:00:00", "2024-11-01T12:00:00", "2024-11-01T14:00:00"] },
+  { id: 12, name: "Dr. Lily Adams", specialty: "Psychiatrist", rating: "4.8", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Focuses on mental health and wellbeing.", availableSlots: ["2024-11-01T09:00:00", "2024-11-01T13:00:00", "2024-11-01T16:00:00"] },
+  { id: 13, name: "Dr. Thomas White", specialty: "Pulmonologist", rating: "4.6", image: "https://th.bing.com/th/id/OIP.tLotgCDtzgTdwJcTiXWRCwHaEK?rs=1&pid=ImgDetMain", bio: "Lung and respiratory system specialist.", availableSlots: ["2024-11-01T10:00:00", "2024-11-01T12:00:00", "2024-11-01T15:00:00"] },
+  { id: 14, name: "Dr. Chloe Brown", specialty: "Hematologist", rating: "4.7", image: "https://images.nightcafe.studio/jobs/D9QccqCUSZTQkryHXbNq/D9QccqCUSZTQkryHXbNq--4--9zdcg.jpg?tr=w-1600,c-at_max", bio: "Specialist in blood disorders.", availableSlots: ["2024-11-01T09:00:00", "2024-11-01T11:30:00", "2024-11-01T14:30:00"] },
     // Add more doctors as needed
   ];
   
