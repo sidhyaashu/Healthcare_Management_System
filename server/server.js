@@ -1,7 +1,21 @@
-import express from 'express';
-const app = require('./src/app');
-const PORT = process.env.PORT || 3000;
+import app from "./src/app.js";
+import dotenv from "dotenv";
+import connectDB from "./src/config/db-config.js";
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+dotenv.config();
+
+// Set default port if not provided in environment variables
+const PORT = process.env.PORT || 5000;
+
+// Connect to database and start server
+(async () => {
+    try {
+        await connectDB();
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    } catch (error) {
+        console.error(`Error connecting to the database: ${error.message}`);
+        process.exit(1); 
+    }
+})();
